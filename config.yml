@@ -1,0 +1,8 @@
+---
+exclude:
+  - AVD-AZU-0009
+
+
+# Queue Services for a storage account, logging should be enabled.
+# Reference: https://avd.aquasec.com/misconfig/azure/storage/avd-azu-0009/
+# No Queue storage required
