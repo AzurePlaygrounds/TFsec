@@ -1,6 +1,6 @@
 ---
 exclude:
-  - AVD-AZU-0008
+  - azure-storage-enforce-https
 
 
 # Queue Services for a storage account, logging should be enabled.
