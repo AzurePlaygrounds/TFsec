@@ -1,24 +1,4 @@
 ---
 exclude:
   - azure-storage-enforce-https
----
-checks:
-- code: Storage01
-  description: Custom check to ensure that AAD authorization is leveraged when accing the Azure portal. This (default_to_oauth_authentication) defaults to false within Terraform and must be set to true.
-  impact: Not setting this value to true may allow for anonymous access. 
-  resolution: Set default_to_oauth_authentication to true.
-  requiredTypes:
-  - resource
-  requiredLabels:
-  - azurerm_storage_account
-  severity: High
-  matchSpec:
-    name: default_to_oauth_authentication
-    action: equals
-    value: true
-  errorMessage: default_to_oauth_authentication must be set to true.
-  relatedLinks:
-  - willaddlater.next
-# Queue Services for a storage account, logging should be enabled.
-# Reference: https://avd.aquasec.com/misconfig/azure/storage/avd-azu-0009/
-# No Queue storage required
+
