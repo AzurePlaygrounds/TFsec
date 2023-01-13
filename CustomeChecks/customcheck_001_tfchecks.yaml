@@ -31,3 +31,18 @@ checks:
   errorMessage: allow_nested_items_to_be_public must be set to false.
   relatedLinks:
   - willaddlater.next
+  - code: Storage03
+  description: An owner must be identified for the storage account. 
+  resolution: Add a tag to the storage account with the owner.
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - azurerm_storage_account
+  severity: Medium
+  matchSpec:
+    name: tags
+    action: contains
+    value: Owner
+  errorMessage: Please add a owner to thee storage account.
+  relatedLinks:
+  - willaddlater.next
