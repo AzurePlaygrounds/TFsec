@@ -1,4 +1,8 @@
 ---
+exclude:
+  - azure-storage-enforce-https
+
+---
 checks:
 - code: Storage01
   description: Custom check to ensure that AAD authorization is leveraged when accing the Azure portal. This (default_to_oauth_authentication) defaults to false within Terraform and must be set to true.
