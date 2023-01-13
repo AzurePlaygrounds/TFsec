@@ -1,6 +1,4 @@
 ---
-exclude:
-  - azure-storage-enforce-https
 
 checks:
 - code: Storage01
