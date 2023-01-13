@@ -40,9 +40,9 @@ requiredLabels:
 - azurerm_storage_account
 severity: Medium
 matchSpec:
-  name: tags
-  action: contains
-  value: Owner
+name: tags
+action: contains
+value: Owner
 errorMessage: Please add a owner to thee storage account.
 relatedLinks:
 - willaddlater.next
