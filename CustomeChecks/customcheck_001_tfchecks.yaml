@@ -16,3 +16,19 @@ checks:
   errorMessage: default_to_oauth_authentication must be set to true.
   relatedLinks:
   - willaddlater.next
+checks:
+- code: Storage02
+  description: Do not allow nested items to be public. 
+  resolution: Set allow_nested_items_to_be_public to false.
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - azurerm_storage_account
+  severity: High
+  matchSpec:
+    name: allow_nested_items_to_be_public
+    action: equals
+    value: false
+  errorMessage: allow_nested_items_to_be_public must be set to false.
+  relatedLinks:
+  - willaddlater.next
