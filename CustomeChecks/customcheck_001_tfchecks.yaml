@@ -12,7 +12,7 @@ checks:
   matchSpec:
     name: default_to_oauth_authentication
     action: equals
-    value: false
+    value: true
   errorMessage: default_to_oauth_authentication must be set to true.
   relatedLinks:
   - willaddlater.next
