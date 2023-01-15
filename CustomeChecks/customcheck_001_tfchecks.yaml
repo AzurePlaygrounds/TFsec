@@ -35,30 +35,7 @@ checks:
   - willaddlater.next
 
 
-# - code: Storage033
-#   description: Tag resources with Owners 
-#   resolution: Add a tag.
-#   requiredTypes:
-#   - resource
-#   requiredLabels:
-#   - azurerm_storage_account
-#   severity: High
-#   matchSpec:
-#     action: isPresent
-#     name: tags
-#     subMatch : 
-#       action : and
-#       predicateMatchSpec :
-#         - name: tags
-#           action: contains
-#           value: Enviornment
- 
-#   errorMessage: The required Owner tag is missing.
-#   relatedLinks:
-#   - willaddlater.next
-
-
-- code: Storage03
+- code: Storage033
   description: Tag resources with Owners 
   resolution: Add a tag.
   requiredTypes:
@@ -67,12 +44,35 @@ checks:
   - azurerm_storage_account
   severity: High
   matchSpec:
+    action: isPresent
     name: tags
-    action: contains
-    value: Owner
+    subMatch : 
+      action : and
+      predicateMatchSpec :
+        - name: tags
+          action: contains
+          value: Enviornment
+ 
   errorMessage: The required Owner tag is missing.
   relatedLinks:
   - willaddlater.next
+
+
+# - code: Storage03
+#   description: Tag resources with Owners 
+#   resolution: Add a tag.
+#   requiredTypes:
+#   - resource
+#   requiredLabels:
+#   - azurerm_storage_account
+#   severity: High
+#   matchSpec:
+#     name: tags
+#     action: contains
+#     value: Owner
+#   errorMessage: The required Owner tag is missing.
+#   relatedLinks:
+#   - willaddlater.next
 
 
 # - code: Storage03_1
