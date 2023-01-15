@@ -35,7 +35,7 @@ checks:
   - willaddlater.next
 
 
-- code: Storage03
+- code: Storage033
   description: Tag resources with Owners 
   resolution: Add a tag.
   requiredTypes:
@@ -49,10 +49,12 @@ checks:
     subMatch : 
       action : and
       predicateMatchSpec :
-        - action : contains
-          name : Owner
-        - action : contains
-          name : Environment 
+        - name: tags
+          action: contains
+          value: Owner
+        - name : tags
+          action: contains
+          value: Environment 
   errorMessage: The required Owner tag is missing.
   relatedLinks:
   - willaddlater.next
