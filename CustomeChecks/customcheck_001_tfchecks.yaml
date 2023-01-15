@@ -1,7 +1,7 @@
 ---
 checks:
 
-- code: Storage01
+- code: Storage-AAD-Auth
   description: Custom check to ensure that AAD authorization is leveraged when accing the Azure portal. This (default_to_oauth_authentication) defaults to false within Terraform. This must be set to true.
   impact: Not setting this value to true may allow for anonymous access. 
   resolution: Set default_to_oauth_authentication to true.
@@ -18,7 +18,7 @@ checks:
   relatedLinks:
   - willaddlater.next
   
-- code: Storage02
+- code: disallow-nested-containers
   description: Do not allow nested items to be public. 
   resolution: Set allow_nested_items_to_be_public to false.
   requiredTypes:
@@ -37,7 +37,7 @@ checks:
 
 
 
-- code: Storage03
+- code: Tag-Storage1
   description: Tag resources with Owners 
   resolution: Add a tag.
   requiredTypes:
@@ -54,7 +54,7 @@ checks:
   - willaddlater.next
 
 
-- code: Storage04
+- code: Tag-Environment-1
   description: Tag resources with Environment 
   resolution: Add a tag.
   requiredTypes:
