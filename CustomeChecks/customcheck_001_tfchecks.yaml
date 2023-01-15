@@ -50,3 +50,26 @@ checks:
   errorMessage: The required Owner tag is missing.
   relatedLinks:
   - willaddlater.next
+
+
+# - code: Storage03_1
+# description: Tag resources with Owners 
+# resolution: Add a tag.
+# requiredTypes:
+# - resource
+# requiredLabels:
+# - azurerm_storage_account
+# severity: High
+# matchSpec:
+#   action: and
+#   name: tags
+#   predicateMatchSpec :
+#     - action : contains
+#       name : tags
+#       value: Owner
+#     - action : contains
+#       name : tags
+#       value: Enviornment
+# errorMessage: Please add the required tags.
+# relatedLinks:
+# - willaddlater.next
