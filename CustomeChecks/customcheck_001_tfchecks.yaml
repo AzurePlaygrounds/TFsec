@@ -69,3 +69,19 @@ checks:
   errorMessage: The required Environment tag is missing.
   relatedLinks:
   - willaddlater.next
+
+- code: auto-updates-1
+  description: Enable auto updates for VM 
+  resolution: Turn on auto updates.
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - azurerm_windows_virtual_machine
+  severity: High
+  matchSpec:
+    name: enable_automatic_updates
+    action: equals
+    value: true
+  errorMessage: Enable auto updates.
+  relatedLinks:
+  - willaddlater.next
