@@ -51,6 +51,21 @@ checks:
   relatedLinks:
   - willaddlater.next
 
+- code: Storage04
+  description: Tag resources with Owners 
+  resolution: Add a tag.
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - azurerm_storage_account
+  severity: High
+  matchSpec:
+    name: tags
+    action: contains
+    value: Environment
+  errorMessage: The required Owner tag is missing.
+  relatedLinks:
+  - willaddlater.next
 
 # - code: Storage03_1
 # description: Tag resources with Owners 
