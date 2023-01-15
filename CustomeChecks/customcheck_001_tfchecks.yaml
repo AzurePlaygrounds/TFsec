@@ -51,10 +51,8 @@ checks:
       predicateMatchSpec :
         - name: tags
           action: contains
-          value: Owner
-        - name : tags
-          action: contains
-          value: Environment 
+          value: Enviornment
+ 
   errorMessage: The required Owner tag is missing.
   relatedLinks:
   - willaddlater.next
